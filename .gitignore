@@ -6,3 +6,4 @@ tmp/cars/*
 !tmp/cars
 coverage
 *.log
+.env
