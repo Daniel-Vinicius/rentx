@@ -5,14 +5,8 @@
     }
   ],
   "settings": {
-    "editor.formatOnSave": false,
     "cSpell.words": [
-      "altera",
-      "alteração",
       "dtos",
-      "lcov",
-      "o",
-      "originalname",
       "rentx",
       "tsyringe"
     ],
