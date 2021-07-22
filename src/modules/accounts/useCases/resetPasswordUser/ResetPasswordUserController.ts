@@ -8,6 +8,12 @@ class ResetPasswordUserController {
     const { token } = request.query;
     const { password } = request.body;
 
+    if (!password) {
+      return response.status(400).json({
+        message: "Error - Fields password missing!",
+      });
+    }
+
     const resetPasswordUserUseCase = container.resolve(
       ResetPasswordUserUseCase
     );

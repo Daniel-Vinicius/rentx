@@ -31,26 +31,25 @@ class SESMailProvider implements IMailProvider {
     const templateParse = handlebars.compile(templateFileContent);
 
     const templateHTML = templateParse(variables);
-    // let AWSEmail = "";
+    let AWSEmail = "";
 
-    // const ses = new SES({
-    //   apiVersion: "2010-12-01",
-    //   region: process.env.AWS_REGION,
-    // });
+    const ses = new SES({
+      apiVersion: "2010-12-01",
+      region: process.env.AWS_REGION,
+    });
 
-    // const identities = await ses
-    //   .listIdentities({
-    //     IdentityType: "EmailAddress",
-    //   })
-    //   .promise();
+    const identities = await ses
+      .listIdentities({
+        IdentityType: "EmailAddress",
+      })
+      .promise();
 
-    // eslint-disable-next-line prefer-destructuring
-    // AWSEmail = identities.Identities[0];
+    const [awsEmail] = identities.Identities;
+    AWSEmail = awsEmail;
 
     await this.client.sendMail({
       to,
-      // from: `Rentx <${AWSEmail}>`,
-      from: "Rentx <rentx@handsoft.space>",
+      from: `Rentx <${AWSEmail}>`,
       subject,
       html: templateHTML,
     });
