@@ -7,7 +7,9 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect=0.0.0.0:9229 --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
     "test": "NODE_ENV=test jest --runInBand --detectOpenHandles",
-    "seed:admin": "ts-node-dev -r tsconfig-paths/register src/shared/infra/typeorm/seed/admin.ts"
+    "seed:admin": "ts-node-dev -r tsconfig-paths/register src/shared/infra/typeorm/seed/admin.ts",
+    "lint": "eslint . --ext .ts --quiet",
+    "lint-fix": "eslint . --ext .ts --fix"
   },
   "dependencies": {
     "aws-sdk": "^2.949.0",
