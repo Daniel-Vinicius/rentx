@@ -48,4 +48,5 @@ jobs:
             cd ~/app/rentx
             yarn
             ./node_modules/.bin/typeorm migration:run
+            yarn test
             pm2 restart rentx
