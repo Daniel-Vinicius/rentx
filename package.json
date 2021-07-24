@@ -13,6 +13,8 @@
     "lint-fix": "eslint . --ext .ts --fix"
   },
   "dependencies": {
+    "@sentry/node": "^6.10.0",
+    "@sentry/tracing": "^6.10.0",
     "aws-sdk": "^2.949.0",
     "bcrypt": "^5.0.1",
     "class-transformer": "^0.4.0",
