@@ -12,7 +12,7 @@
 
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Rentx&uri=https%3A%2F%2Fgithub.com%2FDaniel-Vinicius%2Frentx%2Fblob%2Fmain%2Fdocs%2Finsomnia.json)
 
-API de aluguel de carros, desenvolvida durante o Ignite de NodeJS da Rocketseat. 🏎
+API de aluguel de carros, desenvolvida durante o Ignite de NodeJS da Rocketseat.
 
 * **[Documentação da API](https://docs.rentx.handsoft.space/)**
 * **[API em produção](https://rentx.handsoft.space/)**
@@ -24,7 +24,7 @@ API de aluguel de carros, desenvolvida durante o Ignite de NodeJS da Rocketseat.
 ```
 $ yarn
 ```
-Or:
+Ou:
 ```
 $ npm install
 ```
@@ -33,7 +33,7 @@ $ npm install
 ---
 
 ### **Configurando Banco de dados**
-A Aplicação usa dois banco de dados: [Postgres](https://www.postgresql.org/) e [Redis](https://redis.io/). Para a configuração mais rápida é recomendado usar [docker-compose](https://docs.docker.com/compose/), você só precisa fazer o up de todos os serviços:
+A aplicação usa dois banco de dados: [Postgres](https://www.postgresql.org/) e [Redis](https://redis.io/). Para a configuração mais rápida é recomendado usar [docker-compose](https://docs.docker.com/compose/), você só precisa fazer o up de todos os serviços:
 ```
 $ docker-compose up -d
 ```
@@ -48,7 +48,7 @@ Responsável por armazenar todos os dados do aplicativo. Se por algum motivo voc
 ```
 $ docker run --name rentx-postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 ```
-> Em seguida, crie dois bancos de dados: `rentx` e`rentx_test` (no caso de desejar executar os testes).
+> Em seguida no _Postgres_, crie dois bancos de dados: `rentx` e`rentx_test` (no caso de desejar executar os testes).
 
 ### Migrations
 Lembre se de rodar a migrations:
@@ -64,7 +64,7 @@ $ yarn typeorm migration:run
 ---
 
 ## `.env`
-Neste arquivo, você deve configurar sua conexão do banco de dados Redis e Postgres, JWT, email, sentry, storage e configurações de aws (caso seja necessário).
+Neste arquivo, você deve configurar sua conexão do banco de dados Redis e Postgres, JWT, email, sentry, storage e configurações de AWS (caso seja necessário).
 Renomeie o `.env.example` no diretório raiz para `.env` e então atualize com suas configurações.
 
 ---
@@ -96,7 +96,7 @@ Usamos o [Jest](https://jestjs.io/) para fazer os testes, para executar:
 ```
 $ yarn test
 ```
-Or:
+Ou:
 ```
 $ npm run test
 ```
